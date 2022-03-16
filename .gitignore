@@ -6,7 +6,7 @@ __pycache__
 *.zip
 *.gz
 *.db
-!*.db
+
 
 *.log
 local_settings.py
