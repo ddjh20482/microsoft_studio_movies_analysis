@@ -1,6 +1,6 @@
 ![microsoft logo](./images/ms_logo.jpg)
 
-# microsoft_studio_movies_analysis
+# Microsoft Studio Movies Analysis
 
 **Author**: [Jin-hoon Chung](mailto:ddjh204@gmail.com)
 
