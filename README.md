@@ -72,6 +72,6 @@ For additional info, contact Jin-hoon Chung at [ddjh204@gmail.com](mailto:ddjh20
 ├── images
 ├── __init__.py
 ├── README.md
-├── Microsoft Studio Movie Analysis.pdf
-└── MS Studio Movie Analysis.ipynb
+├── Microsoft_Studio_Movie_Analysis.pdf
+└── MS Studio_Movie_Analysis.ipynb
 ```
