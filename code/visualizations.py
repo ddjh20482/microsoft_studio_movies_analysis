@@ -9,8 +9,6 @@ import seaborn as sns
 import pandas as pd
 import numpy as np
 
-#matplotlib_axes_logger.setLevel('ERROR')
-
 
 
 def profit(df):
