@@ -6,7 +6,7 @@
 
 ## Overview
 
-This project shows analysis on movie markets to help Microsoft start building a new movie studio. Several key aspects of popular movies are selected for the analysis.
+This project shows analysis on movie markets to help Microsoft start building a new movie studio. Several key aspects of popular movies are selected for the analysis. The analysis includes visualizations that would help on where to start.
 
 ## Business Problem
 
@@ -14,7 +14,7 @@ As Microsoft has no background in filming a movie, concrete information is neede
 
 ## Data
 
-Data is collected from well-known websites for movie databases. For the analysis, the selected aspects of the movie are [gross & budget](https://www.the-numbers.com/), [genre](https://www.themoviedb.org/), and [runtime](https://www.imdb.com/). Profit is calculated by subtracting budget from gross, and then the film with at least $10 million profit is selected. However, the profit amounts can easily be modified for different results. The movies are chosen again with release years on and after 2000, and this range can be modified as well.
+Data is collected from well-known websites for movie databases. For the analysis, the selected aspects of the movie are [gross & budget](https://www.the-numbers.com/), [genre](https://www.themoviedb.org/), and [runtime](https://www.imdb.com/). Profit is calculated by subtracting budget from world gross, and then the film with at least $10 million profit is selected. However, the profit amounts can easily be modified for different results. The movies are chosen again with release years on and after 2000, and this range can be modified as well.
 
 ![profit](./images/profit_dist.png)
 
@@ -42,14 +42,14 @@ There are three recommendations to consider to build a new movie studio.
 
 - **The estimated budget to film a movie is below $50 million.** There are movies that cost more than $50 million, but the analysis shows Microsoft does not have to spend a similar amount. 
 - **The recommended genres for a new movie are drama, comedy, action, thriller, and adventure.** Most movies included multiple genres. If a new movie can include recommended genres as much as possible, this would help lead to a successful business.
-- **The runtime for a new movie is recommended to be between 90 to 120 minutes.**
+- **The runtime for a new movie is recommended to be between 90 to 120 minutes.** The majority of movies are around 100 minutes. Thus, it would be ideal to film a new movie that is close to 100 minutes.
 
 ### Next Steps
 
 Further analysis could help gain more ideas on creating a new movie.
 
-- **Run the same analysis again after genres are decided.** Running the same analysis for selected genres would help gain a better result because selecting genres narrows down to a more specific data sample.
-- **More research on the relationship between profit and budget.** The analysis shows a typical budget for the overall profit. A more sophisticated visualization, such as a scatter plot, on a smaller sample, is advised.
+- **Run the same analysis again after genres are decided.** Running the same analysis for selected genres would help gain a better insight because selecting genres narrows down to a more specific data sample.
+- **More research on the relationship between profit and budget.** The analysis shows a typical budget for all movies with the set amount of profit. A more sophisticated visualization, such as a scatter plot, on a smaller sample, is advised for a more precise result.
 - **Find more aspects of movies such as casting size and age rating** Movies can be analyzed in more ways by including more aspects.
 
 ## For More Information
