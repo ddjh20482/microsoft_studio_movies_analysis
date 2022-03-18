@@ -13,18 +13,24 @@ def profit(df, set_year, set_profit):
     
     df = df.drop(columns=['domestic_gross'])
     
+    # last 4 position of release date is saved as year
     df['year'] = [int(i[-4:]) for i in df.release_date]
     df.sort_values(by = 'year', inplace=True)
     df = df.loc[df.year >= set_year]
     
+    # cleaning object value to have int value
     df['budget'] = df.production_budget.str.strip("$")
     df['budget'].replace(',','', regex=True, inplace=True)
     df['budget'] = df.budget.astype(int)
 
+    # cleaning object value to have int value
     df['w_gross'] = df.worldwide_gross.str.strip("$")
     df['w_gross'].replace(',','', regex=True, inplace=True)
     df['w_gross'] = df.w_gross.astype(float)
     
+    # calculate profit and divide by 1 million to have clearer view in the visualization
+    # zero world gross is removed
+    # select rows with higher profit than the set profit
     df['profit'] = round((df['w_gross'] - df['budget']) / 1000000, 2)
     df.drop(df[df.worldwide_gross == 0].index, inplace=True)
     df.sort_values(by = 'profit', inplace=True, ascending=False)
@@ -35,6 +41,7 @@ def profit(df, set_year, set_profit):
 
 def genre(df):
 
+    # remove unnecessary columns
     df = df.drop(columns=[
         'Unnamed: 0', 
         'id', 
@@ -44,12 +51,14 @@ def genre(df):
         'vote_average', 
         'vote_count'])
     
+    # remove duplicate
     df = df.drop_duplicates()
 
     return df
 
 def runtime(con):
 
+    # select title and runtime
     df = pd.read_sql("""
         SELECT movie_id, primary_title, start_year, runtime_minutes 
         FROM movie_basics
@@ -60,6 +69,8 @@ def runtime(con):
     return df
 
 
+# clean element in genre id column from genre data
+# then count genre ids
 def get_count(number, df):
     genre = 0
     for i in df.genre_ids:
@@ -70,8 +81,10 @@ def get_count(number, df):
                 pass
     return genre
 
+
 def genre_count(df):
     
+    # list of genres with designated genre ids
     Genre = {
     '28': 'Action',
     '12': 'Adventure',
@@ -93,26 +106,33 @@ def genre_count(df):
     '10752': 'War',
     '37': 'Western'
     }
+    # another step of cleaning genre column elements
     df.genre_ids.replace(",",'', regex=True, inplace=True)
     
+    # start with blank
     Genre_name = []
     Genre_count = []
     
+    # save names in Genre_name in the order
+    # save count in Genre_count in the order
     for key, value in Genre.items():
         Genre_name.append(value)
         Genre_count.append(get_count(key, df))
-
+    
+    # combine two lists and set as dataframe
     Genre = pd.DataFrame(
         {
             'Genre_name': Genre_name,
             'Genre_count': Genre_count
         }
         )
-
+    
+    # sort the dataframe for the readable visualization
     Genre.sort_values(by = 'Genre_count', inplace=True)
     
     return Genre
 
+# cleaning each movie titles
 def movie_name_clean(series):
 
     series = series.apply(lambda x: x.lower())
