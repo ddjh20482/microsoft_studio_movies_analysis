@@ -14,7 +14,7 @@ As Microsoft has no background in filming a movie, concrete information is neede
 
 ## Data
 
-Data is collected from well-known websites for movie databases. For the analysis, the selected aspects of the movie are [gross & budget](https://www.the-numbers.com/), [genre](https://www.themoviedb.org/), and [runtime](https://www.imdb.com/). Profit is calculated by subtracting budget from world gross, and then the film with at least $10 million profit is selected. However, the profit amounts can easily be modified for different results. The movies are chosen again with release years on and after 2000, and this range can be modified as well.
+Data is collected from well-known websites for movie databases. For the analysis, the selected aspects of the movie are [gross & budget](https://www.the-numbers.com/), [genre](https://www.themoviedb.org/), and [runtime](https://www.imdb.com/). Profit is calculated by subtracting budget from world gross.The movies are chosen with release years on and after 2000, and this range can be modified.
 
 ![profit](./images/profit_dist.png)
 
