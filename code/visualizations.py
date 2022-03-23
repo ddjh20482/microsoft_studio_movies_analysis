@@ -20,8 +20,10 @@ def profit(df):
     ax.set_facecolor('#f0ffff')
 
     ax.hist(x, bins=10)
+    ax.xaxis.set_major_formatter('${x:1.0f}M')
+    
     ax.set_title('Profit Distribution', fontsize=30)
-    ax.set_xlabel('Profit in Million Dollar', fontsize=20)
+    ax.set_xlabel('Profit', fontsize=20)
     ax.set_ylabel('Count', fontsize=20)
     ax.tick_params(labelcolor='#0000ff')
     plt.xticks(fontsize=15)
