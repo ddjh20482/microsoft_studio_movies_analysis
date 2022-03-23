@@ -10,7 +10,7 @@ This project shows analysis on movie markets to help Microsoft start building a 
 
 ## Business Problem
 
-As Microsoft has no background in filming a movie, concrete information is needed for a guide on creating a new movie studio. Microsoft is interested in what is needed to be successful. It would be a good idea to investigate the aspects of the movies that are successful and fairly recent.
+As Microsoft has no background in filming a movie, concrete information is needed for a guide on creating a new movie studio. Microsoft is interested in what is needed to be successful. The analysis will cover several aspects of movies that are fairly recent.
 
 ## Data
 
@@ -20,19 +20,19 @@ Data is collected from well-known websites for movie databases. For the analysis
 
 ## Methods
 
-The analysis of this project shows several visualizations. The visualizations describe how much budget can be estimated, what genres are popular, and how long the movies are.
+The analysis of this project shows several visualizations. The visualizations describe how much budget can be estimated, what genres are profitable, and how much the movie length is enough.
 
 ## Results
 
-The majority of movies had a budget below $50 million.
+A movie tends to be more successful as the budget increases.
 
 ![movie budget](./images/budget_dist.png)
 
-The most popular genres are drama, comedy, action, thriller, and adventure.
+The most profitable genres are animation, adventure, fantasy, family, and Science Fiction.
 
 ![genre](./images/genre_popularity.png)
 
-A typical length of movies is between 90 and 120 minutes.
+A movie seems to make the most profit as the runtime is over 120 minutes.
 
 ![runtime](./images/movie_runtime_dist.png)
 
@@ -40,17 +40,17 @@ A typical length of movies is between 90 and 120 minutes.
 
 There are three recommendations to consider to build a new movie studio.
 
-- **The estimated budget to film a movie is below $50 million.** There are movies that cost more than $50 million, but the analysis shows Microsoft does not have to spend a similar amount. 
-- **The recommended genres for a new movie are drama, comedy, action, thriller, and adventure.** Most movies included multiple genres. If a new movie can include recommended genres as much as possible, this would help lead to a successful business.
-- **The runtime for a new movie is recommended to be between 90 to 120 minutes.** The majority of movies are around 100 minutes. Thus, it would be ideal to film a new movie that is close to 100 minutes.
+- **The movie tends to be more successful as the budget increases.** This would be a tough decision, but it is encouraged to set the budget as high as possible.
+- **The most profitable genres are animation, adventure, fantasy, family, science fiction, action.** The chart shows that those genres typically have profits above zero. It is recommended to choose genres as much as from the six genres.
+- **A movie seems to make the most profit as the runtime is over 120 minutes.** The suggested minimum runtime is above 100 minutes, but the runtime over 120 minutes is highly recommended.
 
 ### Next Steps
 
 Further analysis could help gain more ideas on creating a new movie.
 
-- **Run the same analysis again after genres are decided.** Running the same analysis for selected genres would help gain a better insight because selecting genres narrows down to a more specific data sample.
-- **More research on the relationship between profit and budget.** The analysis shows a typical budget for all movies with the set amount of profit. A more sophisticated visualization, such as a scatter plot, on a smaller sample, is advised for a more precise result.
-- **Find more aspects of movies such as casting size and age rating** Movies can be analyzed in more ways by including more aspects.
+- **Run the same analysis again for the movies with negative profit.** As the analysis was made for the overall movies, it would be a good idea to do a separate study on the movies with negative profit. This would guide Microsoft on what to avoid when filming a new movie.
+- **Research by relating aspects to budget.** Just like how profit was analyzed, the budget can also be related to genre and runtime.
+- **Study how the budget can be spent.** Studying on the budget can lead us to other aspects of the movies. The other aspects can be casting size, filming location, and graphic labor or editing cost.
 
 ## For More Information
 
